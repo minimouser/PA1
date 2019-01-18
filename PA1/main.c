@@ -30,14 +30,23 @@ int main(void) {
 
 	/******************************************************************************************/
 	//second formula (Volume of a cylinder)
-	float radius = 0.0, height = 0.0, volume_cylinder;
+	float radius = 0.0, height = 0.0, volume_cylinder = 0.0; //set variables
 
-	printf("Pleasse enter the radius and height both as floating point values: ");
-	scanf_s("%f%f", &radius, &height);
+	printf("Please enter the radius and height both as floating point values: ");
+	scanf_s("%f%f", &radius, &height);//prompt and get radius and height values
 
 	volume_cylinder = PI * (radius * radius) * height;
-	printf("Volume of any cylinder is: V = PI * radius^2 * height = %f", volume_cylinder);
+	printf("Volume of any cylinder is: V = PI * radius^2 * height = %f", volume_cylinder);//calculates and prints volume
 
 	/******************************************************************************************/
+	//third formula (Character Encoding)
+	char plaintext, shifted;//set variables
+
+	printf("Please enter a single character: ");
+	scanf_s("%c", plaintext); //prompt for a character
+
+	shifted = (plaintext - 'A') + 'a' - 5;
+	printf("Your shifted character is: %c", shifted);//calculates and prints shifted character
+
 	return 0; //indicates success
 }
