@@ -47,10 +47,48 @@ int main(void) {
 	char plaintext, shifted;//set variables
 
 	printf("\n\nPlease enter a single character: ");
-	scanf_s("%c", &plaintext); //prompt for a character
+	scanf_s(" %c", &plaintext); //prompt for a character
 
 	shifted = (plaintext - 'A') + 'a' - 5;
 	printf("Your shifted character is: %c", shifted);//calculates and prints shifted character
+
+	/******************************************************************************************/
+
+	//fourth formula (Distance between 2 points)
+	int x1 = 0, y1 = 0, x2 = 0, y2 = 0;
+	float distance = 0.0; //creates variables
+
+	printf("\n\n Please enter 2 coordinates as integers (x1 y1 x2 y2): ");
+	scanf_s("%d%d%d%d", &x1, &y1, &x2, &y2); //prompts for all 4 digits of the coordinates
+
+
+	distance = (float)sqrt(pow((x1 - x2),2) + pow((y1 - y2),2));
+	printf("The distance between the 2 inputed points is: %f units", distance); //calculates and prints the distance between the points
+
+	/******************************************************************************************/
+
+	//fifth formula (tangent)
+	float theta = 0.0, tanTheta = 0.0; //creates variables
+
+	printf("\n\n Please enter a value for Theta: ");
+	scanf_s("%f", &theta); //prompts for the value of theta
+
+	tanTheta = (float)sin(theta)/(float)cos(theta);
+	printf("Tan(Theta) is: %f", tanTheta); //calculates and prints value of theta
+
+	/******************************************************************************************/
+
+	//sixth formula (Total resistance of resistors in paralell)
+	int r1 = 0, r2 = 0, r3 = 0;
+	float total_resistance = 0.0;
+
+	printf("\n\nPlease enter 3 resistor values (R1 R2 R3): ");
+	scanf_s("%d%d%d", &r1, &r2, &r3);
+
+	total_resistance = (float)1 / ((float)1 / r1 + (float)1 / r2 + (float)1 / r3);
+	printf("The value of the three resistors in parallel is: %f", total_resistance);
+
+	/******************************************************************************************/
 
 	return 0; //indicates success
 }
