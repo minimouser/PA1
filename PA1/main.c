@@ -90,5 +90,15 @@ int main(void) {
 
 	/******************************************************************************************/
 
+	//seventh formula (y = (2 / 3) - y + z * x / (a % 2) + PI )
+	int a = 0, x = 0, z = 0;
+	float y = 0.0;
+
+	printf("\n\nPlease enter values as integers (a x y z): ");
+	scanf_s("%d%d%d%d", &a, &x, &y, &z);
+
+	y = (float)(((float)2 / 3) - y + z * x / (a % 2) + PI);
+	printf("The solution to y = (2 / 3) - y + z * x / (a % 2) + PI is: %f", y);
+
 	return 0; //indicates success
 }
