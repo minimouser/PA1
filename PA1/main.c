@@ -44,7 +44,7 @@ int main(void) {
 
 
 	//third formula (Character Encoding)
-	char plaintext, shifted;//set variables
+	char plaintext = '\0', shifted;//set variables
 
 	printf("\n\nPlease enter a single character: ");
 	scanf_s(" %c", &plaintext); //prompt for a character
@@ -80,25 +80,25 @@ int main(void) {
 
 	//sixth formula (Total resistance of resistors in paralell)
 	int r1 = 0, r2 = 0, r3 = 0;
-	float total_resistance = 0.0;
+	float total_resistance = 0.0; //initialize variables
 
 	printf("\n\nPlease enter 3 resistor values (R1 R2 R3): ");
-	scanf_s("%d%d%d", &r1, &r2, &r3);
+	scanf_s("%d%d%d", &r1, &r2, &r3); //prompt for 3 resistor values
 
 	total_resistance = (float)1 / ((float)1 / r1 + (float)1 / r2 + (float)1 / r3);
-	printf("The value of the three resistors in parallel is: %f", total_resistance);
+	printf("The value of the three resistors in parallel is: %f", total_resistance); //calculates total resistanc eof resistors in paralell
 
 	/******************************************************************************************/
 
 	//seventh formula (y = (2 / 3) - y + z * x / (a % 2) + PI )
 	int a = 0, x = 0, z = 0;
-	float y = 0.0;
+	float y = 0.0; //initialize variables
 
 	printf("\n\nPlease enter values as integers (a x y z): ");
-	scanf_s("%d%d%d%d", &a, &x, &y, &z);
+	scanf_s("%d%d%d%d", &a, &x, &y, &z); //prompts user for variables
 
-	y = (float)(((float)2 / 3) - y + z * x / (a % 2) + PI);
-	printf("The solution to y = (2 / 3) - y + z * x / (a % 2) + PI is: %f", y);
+	y = (float)(((float)2 / 3) - y + z * x / (a % 2) + PI); 
+	printf("The solution to y = (2 / 3) - y + z * x / (a % 2) + PI is: %f", y); //calculates and prints solution
 
 	return 0; //indicates success
 }
